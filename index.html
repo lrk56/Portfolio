@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lillian Kager</title>
+  <!-- Fonts used by the random-letter title (see FONTS in script.js) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Pacifico&family=Lobster&family=Bungee&family=Playfair+Display:ital,wght@1,900&family=Special+Elite&family=Permanent+Marker&family=Orbitron:wght@900&family=Abril+Fatface&family=Caveat:wght@700&family=Press+Start+2P&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#about"    data-nav="about"    class="nav-link">About</a></li>
+      <li><a href="#physical" data-nav="physical" class="nav-link">Physical</a></li>
+      <li><a href="#digital"  data-nav="digital"  class="nav-link">Digital</a></li>
+      <li><a href="#contact"  data-nav="contact"  class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER: name (always visible) -->
+  <header class="header">
+    <h1 class="title">Lillian Kager</h1>
+  </header>
+
+  <!-- SECTIONS (script.js shows one at a time) -->
+  <main class="main">
+
+    <section id="about" class="page-section">
+      <div class="random-strip" id="random-strip" aria-label="A random selection of my work"></div>
+      <h2>About Me </h2>
+      <p>My name is Lillian Kager, and I am a member of the class of 2029 at Drexel University. I am majoring in Computer Science, and minoring in Fine Arts and Data Science.
+      </p>
+      <p>I am passionate about exploring the intersection of the arts and sciences, and how creativity and technical thinking can work together to solve problems, communicate 
+        ideas, and create meaningful experiences. I believe that art and science are not opposing disciplines, but complementary ways of understanding and interacting with the world. 
+        Through my work, I hope to explore how their combination can lead to new perspectives, thoughtful design, and innovative solutions.
+      </p>
+
+      <div class="photo-strip">
+        <figure class="strip-photo">
+          <img src="LillianKager.jpeg" alt="Lillian Kager">
+        </figure>
+
+        <figure class="strip-photo">
+          <img src="LillianKager2.PNG" alt="Lillian Kager">
+        </figure>
+
+        <figure class="strip-photo">
+          <img src="LillianKager3.jpg" alt="Lillian Kager">
+        </figure>
+      </div>
+
+      <h2>My Process</h2>
+      <p>
+        Improvisation and a little mess are built into how I make things. I plan, but I do not expect the plan to survive contact with the work. A smudge, a bad sketch, or a bug that I did not see coming usually points me toward something better than what I started with.
+      </p>
+      <p>I enjoy the slow middle of a project: trying something, stepping back, talking it through with others, and trying again. Whether I am layering an oil painting, building a sculpture, or debugging code, I would rather work through each stage properly than rush to a finished result. The finished piece tends to be stronger, and I understand it better because of the detours.
+      </p>
+      <p>
+        The same habits carry across everything I do. Communicating clearly, staying flexible, and being willing to start over are as much a part of my process as any technique.
+      </p>
+      <figure class="about-photo">
+        <img src="LKAGER-PROCESS1.jpg" alt="Lillian working on a painting in the studio">
+        <figcaption>Photo by Michael Simpson, The Stone Independent School, 2024</figcaption>
+      </figure>
+
+      <div class="contact-band">
+        <h2 id="contact">Contact Me</h2>
+        <p>
+          I am always looking for new opportunities, collaborations, and connections, especially those that bring together art and technology. Whether you have a project in mind, a question about my work, or just want to talk about creativity and code, I would love to hear from you.
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/lillian-kager-704332400/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p>Email: <a href="mailto:lrk56@drexel.edu">lrk56@drexel.edu</a></p>
+      </div>
+    </section>
+
+    <section id="physical" class="page-section hidden">
+
+      <div class="sub-nav">
+        <button class="sub-link" data-target="paintings">Paintings</button>
+        <button class="sub-link" data-target="photography">Photography</button>
+        <button class="sub-link" data-target="collage">Collage</button>
+        <button class="sub-link" data-target="sculpture">Sculpture</button>
+      </div>
+
+      <h3 id="paintings" class="sub-heading">Paintings</h3>
+      <div class="photo-row">
+
+        <figure class="small-photo">
+          <img src="OilPainting1.png" alt="Abstract Self Portrait">
+          <figcaption>
+            <p>Title: Sunflower Projection Self Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2024</p>
+            <p>Description: This piece depicts an abstracted self portrait based on reference images using a projector to cast 
+            sunflower textures onto the face.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting2.png" alt="Equine Portrait">
+          <figcaption>
+            <p>Title: "Paisley": Equine Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2025</p>
+            <p>Description: This piece is an equine portrait.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting4.png" alt="Equine Portrait">
+          <figcaption>
+            <p>Title: "Sage": Equine Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2025</p>
+            <p>Description: This piece is an equine portrait, created in memoriam. 
+            Working from multiple low-quality images, my goal was to combine several references to create an accurate, 
+            comprehensive depiction of the horse. This was a challenging exercise in observing details across different 
+            images and bringing them together into one cohesive portrait.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting5.png" alt="Prehistoric Portrait">
+          <figcaption>
+            <p>Title: A Silurian Scene</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2026</p>
+            <p>Description: This piece is a hand-painted poster inspired by "Jaws" posters. 
+            It depicts a prehistoric Silurian seascape, a predatory, exaggerated Eurypterid 
+            the focus of the scene. This painting required extensive research, planning, and 
+            iteration, as I wanted to accurately depict the dynamic relationships within
+            a prehistoric ecosystem.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting6.png" alt="Still Life Study">
+          <figcaption>
+            <p>Title: Still Life Study</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2024</p>
+            <p>Description: This was completed as an introductory painting class study,
+            with the aim to gain a greater understanding of value, shading, and light. 
+            Using a limited palette of rust and blue paints, I explored how color and contrast 
+            can be used to represent shadows and create depth in a still life composition.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting7.png" alt="Dog Portrait">
+          <figcaption>
+            <p>Title: "Sasha": A Canine Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2025</p>
+            <p>Description: This piece is a portrait of a dog, created in memoriam.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting8.png" alt="Possum Portrait">
+          <figcaption>
+            <p>Title: Possum Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2026</p>
+            <p>Description: This is a portrait of a possum.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting9.png" alt="Upside Down Study">
+          <figcaption>
+            <p>Title: Upside Down Portrait</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2024</p>
+            <p>Description: Working from a reference image that I was not allowed to view right-side-up, 
+            the goal was to focus on the shapes, values, and colors that I actually observed, 
+            rather than relying on preconceived ideas of what a subject should look like. 
+            This exercise challenged me greatly to approach paintings more objectively and pay 
+            closer attention to visual details.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting10.png" alt="Personal Still Life Study">
+          <figcaption>
+            <p>Title: Self Reflection Still Life</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2024</p>
+            <p>Description: For this assignment, I was asked to build my own still life out of objects that 
+            best represent who I am. I chose to intertwine the different parts of my identity on a wall: 
+            my favorite Converse, competition numbers from equestrian events over the years, and a horseshoe 
+            from a late horse. Each object carries its own history, and putting them together let me see how 
+            those pieces fit into one picture of me.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="small-photo">
+          <img src="OilPainting11.png" alt="Subtractive Study">
+          <figcaption>
+            <p>Title: Subtractive Study</p>
+            <p>Medium: Oil</p>
+            <p>Year: 2024</p>
+            <p>Description: This is a painting of a vase made with a subtractive process. 
+            We were only allowed to apply a single layer of thinned paint, and from there 
+            the image had to be built by removing paint with rags and Q-tips. Instead of 
+            adding color and detail, I had to find the vase by wiping away everything that 
+            was not part of it, which meant thinking about light and form in reverse.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <h3 id="photography" class="sub-heading">Photography</h3>
+      <div class="photo-strip">
+        <h3 class="gallery-label">Equine</h3>
+
+        <figure class="gallery-photo">
+
+        <img src="Photography1.jpg" alt="Photography1.jpg"
+            data-caption="Title: Equine Portrait. Location: Swedesboro, NJ. Year: 2021.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography2.jpg" alt="Photography2.jpg"
+          data-caption="Title: Equine Portrait. Location: Swedesboro, NJ. Year: 2021.">
+          
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography3.jpg" alt="Photography3.jpg"
+          data-caption="Title: Sophia and Rasher. Location: Strasburg, PA. Year: 2021.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography4.jpg" alt="Photography4.jpg"
+          data-caption="Title: Sophia and Rasher. Location: Strasburg, PA. Year: 2021.">
+        </figure>
+
+        <h3 class="gallery-label">Portraits</h3>
+        <figure class="gallery-photo">
+          <img src="Photography5.jpg" alt="Photography5.jpg"
+          data-caption="Title: Portrait Study 1. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography6.jpg" alt="Photography6.jpg"
+          data-caption="Title: Portrait Study 2. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography7.jpg" alt="Photography7.jpg"
+          data-caption="Title: Portrait Study 3. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography8.jpg" alt="Photography8.jpg"
+          data-caption="Title: Portrait Study 4. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography9.jpg" alt="Photography9.jpg"
+
+          data-caption="Title: Portrait Study 5. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography14.png" alt="Photography14.png"
+
+          data-caption="Title: Portrait Study 6. Location: Lancaster, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography15.png" alt="Photography15.png"
+
+          data-caption="Title: Portrait Study 7. Location: Lancaster, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography16.png" alt="Photography16.png"
+
+          data-caption="Title: Portrait Study 8. Location: Lancaster, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography17.png" alt="Photography17.png"
+
+          data-caption="Title: Portrait Study 9. Location: Philadelphia, PA. Year: 2026.">
+          
+        </figure>
+
+        <h3 class="gallery-label">Travel & Places</h3>
+
+        <figure class="gallery-photo">
+          <img src="Photography18.jpg" alt="Photography18.png"
+          data-caption="Title: Chilean Mountains. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography19.jpg" alt="Photography19.png"
+          data-caption="Title: Chilean Volcano. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography20.jpg" alt="Photography20.png"
+          data-caption="Title: Chilean Landscape. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography21.jpg" alt="Photography21.png"
+          data-caption="Title: Chilean Landscape 2. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography22.jpg" alt="Photography22.png"
+          data-caption="Title: Reconnecting. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography23.jpg" alt="Photography23.png"
+          data-caption="Title: Open Gate. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography24.jpg" alt="Photography24.png"
+          data-caption="Title: Caterpillar. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography25.jpg" alt="Photography25.png"
+          data-caption="Title: Caterpillar 2. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography26.jpg" alt="Photography26.png"
+          data-caption="Title: Firecrown. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography27.jpg" alt="Photography27.png"
+          data-caption="Title: Fighting Firecrowns. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography28.jpg" alt="Photography28.png"
+          data-caption="Title: Staring Contest. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography29.jpg" alt="Photography29.png"
+          data-caption="Title: Golden Hour Journaling. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography30.jpg" alt="Photography30.png"
+          data-caption="Title: Painted Tree Iguana. Location: Patagonia, Chile. Year: 2024.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography10.png" alt="Photography10.png"
+          data-caption="Title: Scale. Location: Lancaster, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography11.png" alt="Photography11.png"
+          data-caption="Title: Spiral Staircase. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography12.png" alt="Photography12.png"
+          data-caption="Title: River Trail. Location: Philadelphia, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography13.png" alt="Photography13.png"
+          data-caption="Title: Fence Silhouette. Location: Lancaster, PA. Year: 2026.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography31.jpg" alt="Photography31.jpg"
+          data-caption="Title: Early Riser. Location: Junction, TX. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography32.JPG" alt="Photography32.jpg"
+          data-caption="Title: Vanride Essentials. Location: Unknown, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography33.JPG" alt="Photography33.jpg"
+          data-caption="Title: Nails. Location: Nebraska, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography34.jpg" alt="Photography34.jpg"
+          data-caption="Title: Rusted Sign. Location: Texas, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography35.jpg" alt="Photography35.jpg"
+          data-caption="Title: Footprints. Location: White Sands National Park, NM, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography36.jpg" alt="Photography36.jpg"
+          data-caption="Title: Pensive. Location: White Sands National Park, NM, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography37.jpg" alt="Photography37.jpg"
+          data-caption="Title: Expanse. Location: White Sands National Park, NM, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography38.jpg" alt="Photography38.jpg"
+          data-caption="Title: Solitary. Location: Arizona, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography39.jpg" alt="Photography39.jpg"
+          data-caption="Title: Desolation Shack. Location: Salton Sea, CA, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography40.jpg" alt="Photography40.jpg"
+          data-caption="Title: ¡Buenas vibras!. Location: Salton Sea, CA, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography41.jpg" alt="Photography41.jpg"
+          data-caption="Title: Saltset. Location: Salton Sea, CA, United States. Year: 2023.">
+        </figure>
+
+        <figure class="gallery-photo">
+          <img src="Photography42.jpg" alt="Photography42.jpg"
+          data-caption="Title: Salt. Location: Bonneville Salt Flats, UT, United States. Year: 2023.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography43.jpg" alt="Photography43.jpg"
+          data-caption="Title: Pumpjack. Location: Texas, United States. Year: 2023.">
+        </figure>
+        <figure class="gallery-photo">
+          <img src="Photography44.jpg" alt="Photography44.jpg"
+          data-caption="Title: Windstruck. Location: Nebraska, United States. Year: 2023.">
+        </figure>
+      </div>
+
+      <h3 id="collage" class="sub-heading">Collage</h3>
+      <div class="photo-row">
+        <!-- collage figures go here -->
+      </div>
+
+      <h3 id="sculpture" class="sub-heading">Sculpture</h3>
+      <div class="photo-row">
+        <!-- sculpture figures go here -->
+      </div>
+
+    </section>
+
+    <section id="digital" class="page-section hidden">
+      <h2>Digital</h2>
+
+      <div class="project-list">
+
+        <article class="project-card">
+          <div class="project-images">
+            <a href="https://codeu.onrender.com" target="_blank" rel="noopener noreferrer">
+              <img src="Codeu.png" alt="Screenshot of the CodeU website">
+            </a>
+          </div>
+          <div class="project-info">
+            <p>Title: CodeU</p>
+            <p>Type: Web application</p>
+            <p>Year: 2026</p>
+            <p>Built with: HTML, TailWind CSS, JavaScript, React JS, MongoDB</p>
+            <p>Description: CodeU is a programming learning platform built around learning by doing. 
+              Users work through hands-on coding challenges, try out code in a built-in online editor with instant feedback, 
+              and earn certificates for completing courses. Each learner gets a profile to track their progress. 
+              The site is organized around development roadmaps, such as front-end, back-end, full-stack, and mobile. 
+              Python is the first language available, with more planned for the future.</p>
+            <p>
+              <a href="https://codeu.onrender.com" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-images">
+            <a href="https://www.cs.drexel.edu/~lrk56/2025-2026/index.html" target="_blank" rel="noopener noreferrer">
+              <img src="VirtualPet.png" alt="Screenshot of Moose the virtual pet dog">
+            </a>
+            <img src="VirtualPet2.png" alt="Moose's states in pixel art">
+          </div>
+          <div class="project-info">
+            <p>Title: Virtual Pet: Moose the Dog</p>
+            <p>Type: Interactive Web Project (CS 164)</p>
+            <p>Year: 2025</p>
+            <p>Built with: Tranquility, HTML, CSS</p>
+            <p>Description: An interactive virtual pet that models a finite state machine. 
+              Moose is based on a Miniature Australian Shepherd, and her eager, impatient personality drives the design. 
+              She moves between nine states, including neutral, hungry, happy, bored, sick, tired, frustrated, sleeping, and 
+              excited, depending on which of seven actions you choose (play, feed, pet, walk, nap, medicate, wake up). 
+              Timers add to the challenge: she gets bored if ignored for 25 seconds, hungry after 30, and falls asleep on 
+              her own if she's tired for too long. Feeding her when she isn't hungry makes her sick. I drew the pixel art for 
+              each state myself, inspired by the dog design in Stardew Valley.</p>
+            <p>
+              <a href="https://www.cs.drexel.edu/~lrk56/2025-2026/index.html" target="_blank" rel="noopener noreferrer">Play with Moose</a>
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox hidden" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

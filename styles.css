@@ -1,0 +1,466 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Mono", monospace;
+  color: #171717;
+  background: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;       /* stops a sideways scrollbar from the full-width bands */
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  border-bottom: 1px solid #e5e5e5;
+  background: #898989;
+}
+
+.nav-list {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Added by script.js to the current section's link */
+.nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+.header {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  position: relative;
+  isolation: isolate;       /* keeps the band behind the name */
+}
+
+/* Full-page-width gray band behind the name */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #f5f5f5;
+  z-index: -1;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(3rem, 12vw, 7rem); /* big, but shrinks on small screens */
+  line-height: 1.2;
+}
+
+/* Title letters start hidden but still take up space, so the layout never jumps while typing */
+.letter {
+  visibility: hidden;
+  white-space: pre;
+}
+
+.letter.shown {
+  visibility: visible;
+}
+
+/* ---------- Sections ---------- */
+.main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+.page-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- Full-width photo (My Process) ---------- */
+.about-photo {
+  margin: 1.5rem 0;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about-photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #737373;
+}
+
+/* ---------- Photos with a text box on the right ---------- */
+.photo-row {
+  display: flex;
+  flex-direction: column;   /* one photo per row, stacked */
+  gap: 0;                   /* no gap, so the bands touch each other */
+  margin: 1.5rem 0;
+}
+
+.small-photo {
+  position: relative;
+  isolation: isolate;       /* keeps the band behind the photo and text */
+  margin: 0;
+  width: 100%;
+  padding: 1.5rem 0;        /* breathing room above and below each photo */
+  display: flex;            /* photo on the left, text on the right */
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* The full-page-width band behind each photo */
+.small-photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #ffffff;
+  z-index: -1;
+}
+
+/* Every second photo gets the light gray band */
+.small-photo:nth-child(even)::before {
+  background: #f5f5f5;
+}
+
+.small-photo img {
+  display: block;
+  width: 30rem;             /* photo size: change this to resize the photos */
+  max-width: 55%;
+  height: auto;
+  flex-shrink: 0;
+  cursor: zoom-in;
+}
+
+.small-photo figcaption {
+  flex: 1;                  /* text box takes all the leftover width */
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #525252;
+}
+
+/* On phones, put the text under the photo instead */
+@media (max-width: 40rem) {
+  .small-photo {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .small-photo img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ---------- Lightbox (click a photo to enlarge) ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;    /* image on top, caption below it */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 75vh;          /* leaves room for the caption */
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  max-width: 40rem;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lightbox-caption p {
+  margin: 0 0 0.25rem;
+}
+
+.lightbox-caption:empty {
+  display: none;             /* no gap when a photo has no caption */
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- Sub-index (Physical page) ---------- */
+.sub-nav {
+  position: relative;
+  isolation: isolate;        /* keeps the band behind the buttons */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;           /* height of the band around the buttons */
+  margin-bottom: 1.5rem;
+}
+
+/* Full-page-width light gray band */
+.sub-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #f5f5f5;
+  z-index: -1;
+}
+
+.sub-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sub-link:hover {
+  text-decoration: underline;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  margin: 3rem 0 0;
+  scroll-margin-top: 1rem;   /* space left above the heading after scrolling */
+}
+
+.sub-heading:first-of-type {
+  margin-top: 0;
+}
+
+/* ---------- Row of small square photos (About Me) ---------- */
+.photo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.strip-photo {
+  margin: 0;
+  width: 17rem;
+  height: 17rem;
+}
+
+.strip-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Contact (full-width gray band) ---------- */
+.contact-band {
+  position: relative;
+  isolation: isolate;        /* keeps the band behind the text */
+  margin-top: 3rem;
+  padding: 1.5rem 0;         /* height of the band around the text */
+}
+
+.contact-band::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #f5f5f5;
+  z-index: -1;
+}
+
+.contact-band h2 {
+  margin-top: 0;
+}
+
+/* ---------- Photography gallery (clickable, natural proportions) ---------- */
+.gallery-photo {
+  margin: 0;
+}
+
+.gallery-photo img {
+  display: block;
+  height: 16rem;             /* every photo gets this height; width follows the photo's shape */
+  width: auto;
+  cursor: zoom-in;
+}
+
+/* ---------- Digital projects ---------- */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;                    /* no gap, so the bands touch each other */
+  margin: 1.5rem 0;
+}
+
+.project-card {
+  position: relative;
+  isolation: isolate;        /* keeps the band behind the content */
+  display: flex;             /* images on the left, text on the right */
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;         /* breathing room above and below each project */
+}
+
+/* The full-page-width band behind each project */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #ffffff;
+  z-index: -1;
+}
+
+/* Every second project gets the light gray band */
+.project-card:nth-child(even)::before {
+  background: #f5f5f5;
+}
+
+.project-images {
+  flex: 0 0 60%;             /* the images' share of the row */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;                 /* space between the stacked images */
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e5e5e5;
+}
+
+.project-info {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #525252;
+}
+
+.project-info p {
+  margin: 0 0 0.5rem;
+}
+
+@media (max-width: 40rem) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-images {
+    flex: none;
+    width: 100%;
+  }
+}
+.gallery-label {
+  flex-basis: 100%;          /* takes the whole row, so photos wrap to the next line */
+  margin: 1.5rem 0 0;
+  font-size: 1.1rem;
+}
+/* ---------- Random photo strip (About page) ---------- */
+.random-strip {
+  display: flex;
+  gap: 0;                    /* photos touch each other; use 0.25rem for thin gaps */
+  width: 100vw;              /* the full width of the browser window */
+  margin: 0 0 2rem calc(50% - 50vw);  /* pulls it out of the centered column to the left edge */
+}
+
+.random-photo {
+  flex: 1 1 0;               /* all 10 share the row equally */
+  min-width: 0;
+  aspect-ratio: 1;           /* square thumbnails */
+  padding: 0;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  opacity: 0;                /* hidden until script.js fades it in */
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.2s ease;
+}
+
+.random-photo.shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.random-photo:hover {
+  transform: translateY(-3px);
+}
+
+.random-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* crops to a square without stretching */
+}
+
+/* Brief outline on the photo you land on after clicking a thumbnail */
+.photo-flash {
+  outline: 4px solid #171717;
+  outline-offset: 4px;
+}

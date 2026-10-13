@@ -77,8 +77,9 @@ body {
 /* Title letters start hidden but still take up space, so the layout never jumps while typing */
 .letter {
   visibility: hidden;
-  white-space: pre;
+  white-space: pre-wrap;     /* keeps the space, but lets the name wrap onto two lines */
 }
+
 
 .letter.shown {
   visibility: visible;

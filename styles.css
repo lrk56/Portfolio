@@ -501,3 +501,28 @@ body {
 .dropdown-link:hover {
   background: #f5f5f5;
 }
+
+/* ---------- Contact buttons ---------- */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: #171717;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #171717;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  background: #ffffff;
+  color: #171717;
+}

@@ -526,3 +526,32 @@ body {
   background: #ffffff;
   color: #171717;
 }
+
+.band-section {
+  position: relative;
+  isolation: isolate;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  scroll-margin-top: 1rem;
+}
+
+.band-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #f5f5f5;
+  z-index: -1;
+}
+
+.band-section .sub-heading {
+  margin-top: 0;
+}
+
+/* The card inside doesn't need its own band */
+.band-section .project-card::before {
+  display: none;
+}

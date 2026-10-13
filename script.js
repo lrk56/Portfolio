@@ -95,13 +95,10 @@ const FONTS = [
   '"DM Mono", monospace',
   '"Pacifico", cursive',
   '"Lobster", cursive',
-  '"Bungee", sans-serif',
   '"Playfair Display", serif',
   '"Special Elite", monospace',
   '"Permanent Marker", cursive',
   '"Orbitron", sans-serif',
-  '"Abril Fatface", serif',
-  '"Rubik Mono One", sans-serif',
 ];
 
 function randomFont() {
